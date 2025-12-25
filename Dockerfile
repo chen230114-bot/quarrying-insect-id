@@ -1,10 +1,8 @@
 # Dockerfile - 昆虫识别项目容器化
 FROM docker.1ms.run/python:3.13-slim
 
-# 安装系统依赖（带国内源加速）
-RUN sed -i 's|http://deb.debian.org|https://mirrors.aliyun.com|g' /etc/apt/sources.list && \
-    sed -i 's|http://security.debian.org|https://mirrors.aliyun.com/debian-security|g' /etc/apt/sources.list && \
-    apt-get update && apt-get install -y \
+# 直接安装 OpenCV 所需的运行时依赖
+RUN apt-get update && apt-get install -y \
     libgl1 \
     libglib2.0-0 \
     libsm6 \
