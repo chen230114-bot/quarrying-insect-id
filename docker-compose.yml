@@ -1,0 +1,17 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  insect-identifier:
+    build: .
+    container_name: insect-identifier
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./images:/app/images
+      - ./models:/app/models
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    
