@@ -10,7 +10,7 @@ from insectid import InsectIdentifier
 
 
 if __name__ == '__main__':
-    src_dirs = [r'images', r'E:\_raw\_insect']
+    src_dirs = [r'images']
     
     detector = InsectDetector()
     identifier = InsectIdentifier()
