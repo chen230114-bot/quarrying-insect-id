@@ -8,8 +8,8 @@ services:
     ports:
       - "8001:8001"
     volumes:
+      - ./insectid/models:/app/models:ro
       - ./images:/app/images
-      - ./models:/app/models:ro
       - ./output:/app/output
     environment:
       - PYTHONUNBUFFERED=1
