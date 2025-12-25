@@ -51,11 +51,15 @@ if __name__ == '__main__':
             image_for_draw = khandy.draw_text(image_for_draw, text, position, 
                                               font=None, font_size=15)
 
+        # 保存处理后的图像而不是显示它
+        output_filename = os.path.join('output', os.path.basename(filename))
+        cv2.imwrite(output_filename, image_for_draw)
+        print('Image saved to {}'.format(output_filename))
         print('Elapsed: {:.3f}s'.format(time.time() - start_time))
+
+        # 注释掉或移除下面的GUI相关代码
         # cv2.imshow('image', image_for_draw)
-        key = cv2.waitKey(0)
-        if key == 27:
-            cv2.destroyAllWindows()
-            break
-            
-        
+        # key = cv2.waitKey(0)
+        # if key == 27:
+        #     cv2.destroyAllWindows()
+        #     break
