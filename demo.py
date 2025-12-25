@@ -52,7 +52,7 @@ if __name__ == '__main__':
                                               font=None, font_size=15)
 
         print('Elapsed: {:.3f}s'.format(time.time() - start_time))
-        cv2.imshow('image', image_for_draw)
+        # cv2.imshow('image', image_for_draw)
         key = cv2.waitKey(0)
         if key == 27:
             cv2.destroyAllWindows()
