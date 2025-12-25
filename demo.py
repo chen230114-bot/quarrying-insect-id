@@ -49,7 +49,7 @@ if __name__ == '__main__':
             position[1] = min(max(position[1], 0), image_height)
             cv2.rectangle(image_for_draw, (box[0], box[1]), (box[2], box[3]), (0,255,0), 2)
             image_for_draw = khandy.draw_text(image_for_draw, text, position, 
-                                              font='simsun.ttc', font_size=15)
+                                              font=None, font_size=15)
 
         print('Elapsed: {:.3f}s'.format(time.time() - start_time))
         cv2.imshow('image', image_for_draw)
