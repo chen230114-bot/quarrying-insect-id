@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # 复制项目文件
-COPY . /app
+COPY . .
 
 # 安装Python依赖
 RUN pip install --no-cache-dir --upgrade pip \
@@ -27,7 +27,7 @@ RUN pip install --no-cache-dir -r requirements.txt \
     --timeout=600 --retries=5
 
 # 创建模型和图片目录
-RUN mkdir -p models images
+RUN mkdir -p models images output
 
 # 设置环境变量
 ENV PYTHONPATH=/app
