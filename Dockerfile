@@ -4,13 +4,6 @@ FROM docker.1ms.run/python:3.13-slim
 # 设置工作目录
 WORKDIR /app
 
-# 安装系统依赖
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    gcc \
-    g++ \
-    && rm -rf /var/lib/apt/lists/*
-
 # 复制项目文件
 COPY . /app
 
