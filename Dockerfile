@@ -36,5 +36,8 @@ RUN mkdir -p models images output
 # 设置环境变量
 ENV PYTHONPATH=/app
 
+# 暴露端口
+EXPOSE 8001
+
 # 启动命令
 CMD ["python", "main.py"]
