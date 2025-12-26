@@ -3,4 +3,5 @@ pillow
 khandy>=0.1.8
 onnxruntime
 fastapi
-uvicorn
+uvicorn[standard]
+python-multipart
