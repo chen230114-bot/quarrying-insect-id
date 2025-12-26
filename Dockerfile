@@ -37,4 +37,4 @@ RUN mkdir -p models images output
 ENV PYTHONPATH=/app
 
 # 启动命令
-CMD ["python", "demo.py"]
+CMD ["python", "main.py"]
