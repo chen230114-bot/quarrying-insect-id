@@ -40,4 +40,4 @@ ENV PYTHONPATH=/app
 EXPOSE 8001
 
 # 启动命令
-CMD ["python", "main.py"]
+CMD ["python", "main.py", "--host", "0.0.0.0", "--port", "8001"]
