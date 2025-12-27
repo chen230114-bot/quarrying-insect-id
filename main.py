@@ -37,12 +37,6 @@ async def predict(file: UploadFile = File(...)):
     image_for_draw = image.copy()
     image_height, image_width = image.shape[:2]
 
-    # 3. 预处理
-    if max(image.shape[:2]) > 1280:
-        image = khandy.resize_image_long(image, 1280)
-    image_for_draw = image.copy()
-    image_height, image_width = image.shape[:2]
-
     # 4. 检测 + 识别
     boxes, confs, classes = detector.detect(image)
     results_list = []
